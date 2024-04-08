@@ -1,0 +1,20 @@
+.navbar {
+    border-bottom: 1px solid rgba(242,242,242,255);
+    background-color: white;
+}
+
+.navbar-nav .nav-link.active, .navbar-nav .nav-link.show {
+    color: rgb(69,144,253);
+    background-color: rgba(226,236,254,255);
+}
+
+.btn:hover {
+    color: rgb(69,144,253);
+    background-color: rgba(226,236,254,255);
+}
+
+.user_img {
+    height: 2.5rem;
+    border-radius: 50%;
+}
+

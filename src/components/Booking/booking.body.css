@@ -1,0 +1,9 @@
+.booking_body {
+    background-color: white;
+    border: 1px solid rgba(242,242,242,255);
+}
+
+.user_img_thumb {
+    width: 2rem;
+    border-radius: 50%;
+}
