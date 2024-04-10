@@ -39,7 +39,7 @@ export default function BookingBody(props: Props) {
         if(res) {
             return res.map((user,index) => {
                 return (
-                    <div key={index} className="row my-3 d-flex align-items-center" data-bs-theme='dark'>
+                    <div key={index} className="row my-3 d-flex align-items-center">
                         <p className={`${!theme.theme && 'dark'} col-xxl-1 col-xl-1 col-lg-1 col-md-1 col-sm-4 col-4 m-0 fw-normal text-light-emphasis d-flex flex-row-reverse`}>08:20</p>
                         <div className="col-xxl-1 col-xl-1 col-lg-1 col-md-1 col-sm-4 col-4 d-flex justify-content-center">
                             <img className=' m-0 user_img_thumb' src={user.avatar} alt={user.first_name} />
