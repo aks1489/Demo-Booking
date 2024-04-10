@@ -5,7 +5,7 @@ export default function BookingModal(props: any) {
 
     const theme = useThemeContext()
     return(
-            <div className="modal fade" id="exampleModal" data-bs-backdrop="static" data-bs-keyboard="false" tabIndex={-1} aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div className="modal fade" id="exampleModal" data-bs-backdrop="static" data-bs-keyboard="false" tabIndex={-1} aria-labelledby="staticBackdropLabel" aria-hidden="true" data-bs-theme={!theme.theme && 'dark'} >
                 <div className="modal-dialog">
                     <div className="modal-content">
                     <div className="modal-header gap-2">
