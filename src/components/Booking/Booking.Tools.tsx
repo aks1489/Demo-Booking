@@ -1,6 +1,12 @@
+import { useThemeContext } from '../../Context';
 import './booking.tools.css'
 
-export default function BookingTools(props: any) {
+interface Props {
+    setPage: React.Dispatch<React.SetStateAction<number>> ;
+    currentPage : number
+}
+
+export default function BookingTools(props: Props) {
 
     const nextPage = () =>{
         props.setPage(prv => {
@@ -13,8 +19,11 @@ export default function BookingTools(props: any) {
             return props.currentPage === 1 ? 1 : prv - 1
         })
     }
+
+    const theme = useThemeContext()
+
     return (
-        <div className="container mt-5">
+        <div className="container mt-5" data-bs-theme={!theme.theme && 'dark'}>
             <div className="date d-flex flex-row-reverse gap-1">
                 <div className="btn-group">
                     <button type="button" className="btn btn-outline-secondary fw-medium border-2 border-light-subtle rounded-pill px-3 dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">

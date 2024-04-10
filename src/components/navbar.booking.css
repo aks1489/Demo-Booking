@@ -3,6 +3,15 @@
     background-color: white;
 }
 
+.navbar.dark {
+    border-bottom: 1px solid #4a4a4a;
+    background-color: #121212;
+}
+
+.dark {
+    color: #acac93;
+}
+
 .navbar-nav .nav-link.active, .navbar-nav .nav-link.show {
     color: rgb(69,144,253);
     background-color: rgba(226,236,254,255);

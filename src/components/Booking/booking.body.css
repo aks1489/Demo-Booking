@@ -7,3 +7,12 @@
     width: 2rem;
     border-radius: 50%;
 }
+
+.booking_body.dark {
+    background-color: #121212;
+    border: 1px solid #373636;
+}
+
+.dark {
+    color: #acac93;
+}

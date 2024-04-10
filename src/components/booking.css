@@ -1,0 +1,8 @@
+.booking {
+    height: 100vh;
+    background-color: rgb(247 247 247);
+}
+
+.booking.dark {
+    background-color: #212121;
+}

@@ -4,6 +4,7 @@ import BookingTools from "./Booking/Booking.Tools";
 import NavBar from "./NavBar";
 import './booking.css'
 import axios from "axios";
+import { useThemeContext } from "../Context";
 
 export default function Booking() {
     const [res, setRes] = useState<any>()
@@ -19,8 +20,11 @@ export default function Booking() {
         data();
     },[currentPage])
 
+    console.log(res)
+
+    const theme = useThemeContext()
     return(
-        <div className="booking">
+        <div className={`booking ${!theme.theme && 'dark'}`}>
             <NavBar />
             <BookingTools setPage={setCurrentPage} currentPage={currentPage} />
             <BookingBody response={res}/>
