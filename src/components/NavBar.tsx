@@ -1,6 +1,12 @@
 import { useThemeContext } from '../Context'
+import { NavThemeToggler } from './Nav.Theme.Toggler'
 import './navbar.booking.css'
-export default function NavBar() {
+
+interface Props {
+    setTheme: (theme: string) => void;
+}
+
+export default function NavBar(props : Props) {
 
     const theme = useThemeContext()
     return(
@@ -33,6 +39,7 @@ export default function NavBar() {
                         </li>
                     </ul>
                 </div>
+                <NavThemeToggler setTheme={props.setTheme} />
             </div>
         </nav>
     )

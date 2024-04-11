@@ -33,8 +33,6 @@ export default function BookingBody(props: Props) {
 
     const theme = useThemeContext()
 
-    console.log(theme)
-
     const renderData = () => {
         if(res) {
             return res.map((user,index) => {

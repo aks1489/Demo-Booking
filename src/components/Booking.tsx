@@ -6,7 +6,12 @@ import './booking.css'
 import axios from "axios";
 import { useThemeContext } from "../Context";
 
-export default function Booking() {
+
+interface Props {
+    setTheme: (theme: string) => void;
+}
+
+export default function Booking(props : Props) {
     const [res, setRes] = useState<any>()
     const [currentPage, setCurrentPage] = useState<any>(1)
     useEffect(() => {
@@ -20,12 +25,10 @@ export default function Booking() {
         data();
     },[currentPage])
 
-    console.log(res)
-
     const theme = useThemeContext()
     return(
         <div className={`booking ${!theme.theme && 'dark'}`}>
-            <NavBar />
+            <NavBar setTheme={props.setTheme}/>
             <BookingTools setPage={setCurrentPage} currentPage={currentPage} />
             <BookingBody response={res}/>
         </div>
